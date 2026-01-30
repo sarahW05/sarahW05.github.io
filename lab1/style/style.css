@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.pics{
+    width: 300px;
+    height: 300px
+}
+
+.people{
+    margin: 40px;
+    width: 18%
+}
+
+#carlos{
+    margin: 0px
+}
+
+#flexBox{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+h1, .names{
+    font-family: Montserrat;
+}

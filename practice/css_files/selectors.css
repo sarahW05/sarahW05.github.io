@@ -1,0 +1,57 @@
+#title{
+    color: yellow;
+    font-family: 'Pacifico', cursive;
+    font-size:max(2vw, 7vw); 
+    margin:0 auto;
+}
+
+.row{
+    display:flex; 
+    justify-content:center
+}
+
+.figures{
+    text-align: center;
+    width:40%
+}
+
+.pics{
+    border:1px solid yellow;
+    width:100%;
+    height:auto
+}
+#img1{
+    border-top-left-radius:25px; 
+}
+
+#img2{
+    border-top-right-radius:25px; 
+}
+#img3{
+    border-bottom-left-radius:25px; 
+}
+
+#img4{
+    border-bottom-right-radius:25px; 
+}
+
+.caption{
+    color:white; 
+    font-size:max(2vw, 4vw)
+}
+
+#break{
+    width:75%; 
+    margin-top:20px
+}
+
+#bottom{
+    font-size:3vw; 
+    color:silver;
+    text-align:center; 
+    top-padding:10px
+}
+
+#logo{
+    width:15%
+}
