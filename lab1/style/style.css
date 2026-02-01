@@ -23,3 +23,12 @@
 h1, .names{
     font-family: Montserrat;
 }
+
+.sections{
+    background-color: lightpink;
+}
+
+.content{
+    background-color: antiquewhite;
+}
+
