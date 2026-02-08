@@ -1,0 +1,32 @@
+#background{
+    background-image: url(../wallpaper_lab.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.items{
+    text-align: center;
+    font-size: larger;
+}
+
+h1, p{
+    background-color: antiquewhite;
+    font-style: italic;
+}
+
+button{
+    background-color: aquamarine;
+    color:darkblue;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+input{
+    width: 65px;
+    height: 30px;
+    background-position: center;
+    border-color:darkblue;
+    background-color: antiquewhite;
+}
+
