@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3: Quiz</title>
+    <script src="js/script.js" defer>
+
+    </script>
+</head>
+<body>
+    <h1>Coffee Quiz</h1>
+
+    1. What type of coffee uses the most milk  <br>
+    <!--
+        <label><input type="radio" name="q1" value="latte"> Latte </label>
+        <label><input type="radio" name="q1" value="cortado"> Cortado </label>
+        <label><input type= "radio" name="q1" value="cold brew"> Cold Brew </label>
+        <br>
+        -->
+        <div id="q1optionsDiv"> </div>
+        <p id="firstResult"></p>
+    <br> 
+
+    2. What country produces the most coffee beans? <br>
+    
+    <input type="text" id="answerInput">
+    <p id="secondResult"></p>
+    <br>
+
+
+    3. What is the most Popular Brewer <br>
+    <select id="brews" name="Brews">
+        <option value="pour-over">Pour-Over</option>
+        <option value="drip">Drip</option>
+        <option value="espresso">Espresso</option>
+    </select>
+    <p id="thirdResult"></p>
+
+    4. How many ounces are in a double-shot of espresso?<br>
+    <input type="number" id="numInput">
+    <p id="fourthResult"></p>
+
+    5. Coffee is a bean. True or false
+    <input type="checkbox" id="tOrf">True
+    <p id="fifthResult"></p>
+
+    <br>
+    <button> Submit Quiz</button>    
+
+
+</body>
+</html>
