@@ -2,6 +2,10 @@
     background-image: url(../wallpaper_lab.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    height: 100vh;
+    align-items: center;
+    width: 100vw;
 }
 
 .items{
@@ -30,3 +34,9 @@ input{
     background-color: antiquewhite;
 }
 
+#feedback{
+    margin-top: 10px;
+    min-height: 20px;
+    text-emphasis: "*" red;
+    background-color: antiquewhite;
+}

@@ -1,43 +1,84 @@
-console.log("running");
-
-let correctNumber = 6;
-let correctMessage = "Good job, you got it right!";
-let less = "Too low";
-let high = "Too high";
-let noInput = "Enter a number";
+let correctNumber;
 let guessCount = 0;
-let guess = "Total Guesses: ";
-let withinLimit = "You guessed within the 7 attempts!";
+let wins = 0;
+let losses = 0;
 
 let guessInput = document.querySelector("#guessInput");
 let guessButton = document.querySelector("#guessButton");
 let guessResult = document.querySelector("#guessResult");
 let totalGuesses = document.querySelector("#totalGuesses");
-let targetGuess = document.querySelector("#targetGuess");
+let tries = document.querySelector("#numOfAttempts");
+let winner = document.querySelector("#wins");
+let loser = document.querySelector("#loss");
+let resetBtn = document.querySelector("#resetButton");
 
+
+initializeGame();
 
 guessButton.addEventListener("click", function(){
-    if(guessInput.value == correctNumber){
-        guessResult.textContent = correctMessage;
-        guessResult.style.color = "green";
-        guessCount++;
-        totalGuesses.textContent = guess + guessCount;
-        if(guessCount<7 ){
-            targetGuess.textContent = withinLimit;
-            targetGuess.style.color = "green";
-        }
+    guessResult.textContent = "";
 
+    let userGuess = guessInput.value;
+    if(userGuess < 1 || userGuess > 99){
+        guessResult.textContent = "Enter a number between 1 and 99";
+        guessResult.style.color = "red";
+        return;
     }
-    else if (guessInput.value < correctNumber){
-        guessResult.textContent = less;
-        guessResult.style.color = "orange";
-        guessCount++;
-        totalGuesses.textContent = guess + guessCount;
+
+    guessCount++;
+    tries.textContent = "Num of attempts: " + guessCount;
+
+    if(userGuess == correctNumber){ 
+        guessResult.textContent = "That's right! You win!!";
+        guessResult.style.color = "darkgreen";
+        wins++;
+        winner.textContent = "Num of wins: " + wins;
+        gameOver();
     }
     else{
-        guessResult.textContent = high;
-        guessResult.style.color = "red";
-        guessCount++;
-        totalGuesses.textContent = guess + guessCount;
+        totalGuesses.textContent += userGuess + " ";
+
+        if(guessCount == 7){
+            guessResult.textContent = "You lose :( " + correctNumber;
+            guessResult.style.color = "darkred";
+            losses++;
+            loser.textContent = "Num of losses: " + losses;
+            gameOver();
+        }
+        else if(userGuess > correctNumber){
+            guessResult.textContent = "Guess was too high";
+            guessResult.style.color = "orange";
+        }
+        else{
+            guessResult.textContent = "Guess was too low";
+            guessResult.style.color = "orange";
+        }
     }
 });
+
+resetBtn.addEventListener("click", initializeGame);
+
+function initializeGame(){
+    resetBtn.style.display = "none";
+    correctNumber = Math.floor(Math.random()*99)+1;
+    guessCount = 0;
+
+    guessInput.value = "";
+    guessInput.focus();
+
+    guessResult.textContent = "";
+    totalGuesses.textContent = "";
+    tries.textContent = "";
+    winner.textContent = "";
+    loser.textContent = "";
+
+    guessButton.style.display = "inline";
+    resetBtn.style.display = "none";
+}
+
+function gameOver(){
+    guessButton.style.display = "none";
+    resetBtn.style.display = "inline";
+}
+
+

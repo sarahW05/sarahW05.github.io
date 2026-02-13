@@ -24,7 +24,8 @@ function initializeGame(){
 
     let feedback = document.querySelector("#feedback");
     feedback.textContent = ""; //clear feedback
-    document.querySelector("#guesses").textContent = "";
+    let guess = document.querySelector("#guesses");
+    guess.textContent = "";
 }
 
 function checkGuess(){
