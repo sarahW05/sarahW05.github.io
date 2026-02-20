@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script> 
+        const person ={
+            firstName: "John",
+            lastName: "Doe",
+            age: 19,
+            eyeColor: "green",
+            siblings: ["Jane", "Jym"],
+            parents: [
+                {
+                    firstName:"Dave",
+                    age: 33,
+                    eyeColor: "blue"
+                },
+                {
+                    firstName: "Lacy",
+                    age: 31,
+                    eyeColor: "green"
+                }
+            ]
+        };
+        //get first name of Lacy
+        alert(person.parents[1].firstName);
+        //if property has special characters use [ ] ex: "last-Name" then use person["last-Name"]
+        //alert(person.lastName);
+
+        //this gets Jym
+        aler(person.siblings[1]);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

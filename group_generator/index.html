@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <h1>Random Group Generator </h1>
+
+    What kind of group do you want?<br>
+
+    <select id="group_type" name="type">
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        <option value="Mix">Mixed</option>
+    </select>
+    <br>
+
+
+    Team Size: 
+    <input type="number" id="size">
+
+    <br>
+
+
+    Order of Team Member Names <br>
+
+    <input type="checkbox" name="order" id="ordered">Alphabetical
+    <input type="checkbox" name="order" id="unordered"> Unordered
+
+    <br>
+
+    <div id="result"> 
+
+    </div>
+
+    <img id="groupPic" src="group.png" alt="Group picture"> <br>
+
+    <button> Generate Group </button>    
+</body>
+</html>
