@@ -14,32 +14,20 @@ let fifthResult = document.querySelector("#fifthResult");
 
 shuffleQ1Answers();
 
-function checkStatus(){
-    var checkBox = document.getElementById("tOrf");
-    var outputText = document.getElementById("fifthResult");
-    if(checkBox.checked){
-        outputText.textContent = correctOption;
-        outputText.style.color = "green";
-    }
-    else{
-        outputText.textContent = wrongOption;
-        outputText.style.color = "red";
-    }
-}
 
-function shuffleQ1Answers(){
+function shuffleQ1Answers() {
     let qOptions = ["Latte", "Cortado", "Cold Brew"];
 
     //uses fisher-yates shuffle 
-    for(let m = qOptions.length-1; m> 0; m--){
-        let a = Math.floor(Math.random() * (m+1));
+    for (let m = qOptions.length - 1; m > 0; m--) {
+        let a = Math.floor(Math.random() * (m + 1));
 
         let temp = qOptions[m];
         qOptions[m] = qOptions[a];
         qOptions[a] = temp;
     }
 
-    for(let m of qOptions){
+    for (let m of qOptions) {
         let radioElement = document.createElement("input");
         radioElement.type = "radio";
         radioElement.name = "q1";
@@ -56,8 +44,8 @@ function shuffleQ1Answers(){
     }
 }
 
-function gradeQuiz(){
-    let grade = 0; 
+function gradeQuiz() {
+    let grade = 0;
     let userAnswer1 = document.querySelector("input[name=q1]:checked").value;
     let userAnswer2 = document.querySelector("#answerInput").value;
     let userAnswer3 = document.querySelector("#brews").value;
@@ -71,66 +59,66 @@ function gradeQuiz(){
     let res4 = document.querySelector("#res4");
     let res5 = document.querySelector("#res5");
 
-    if(userAnswer1 == mostMilk){
+    if (userAnswer1 == mostMilk) {
         firstResult.textContent = "Correct!";
         firstResult.style.color = "green";
         res1.src = "img/correct.png";
-        grade +=20;
+        grade += 20;
     }
-    else{
+    else {
         firstResult.textContent = "Wrong!";
         firstResult.style.color = "red";
-        res1.src="img/wrong.png";
+        res1.src = "img/wrong.png";
     }
-    if(userAnswer2 == rightCountry){
+    if (userAnswer2 == rightCountry) {
         secondResult.textContent = "Correct!";
         secondResult.style.color = "green";
-        res2.src="img/correct.png";
-        grade +=20;
-        
+        res2.src = "img/correct.png";
+        grade += 20;
+
     }
-    else{
+    else {
         secondResult.textContent = "Wrong!";
         secondResult.style.color = "red";
-        res2.src="img/wrong.png";
+        res2.src = "img/wrong.png";
     }
-    if(userAnswer3 == rightBrew){
+    if (userAnswer3 == rightBrew) {
         thirdResult.textContent = "Correct!";
         thirdResult.style.color = "green";
-        res3.src="img/correct.png";
-        grade +=20;
+        res3.src = "img/correct.png";
+        grade += 20;
     }
-    else{
+    else {
         thirdResult.textContent = "Wrong!";
         thirdResult.style.color = "red";
-        res3.src="img/wrong.png";
+        res3.src = "img/wrong.png";
     }
-    if(userAnswer4 == rightNum){
+    if (userAnswer4 == rightNum) {
         fourthResult.textContent = "Correct!";
         fourthResult.style.color = "green";
-        res4.src="img/correct.png";
-        grade +=20;
+        res4.src = "img/correct.png";
+        grade += 20;
     }
-    else{
+    else {
         fourthResult.textContent = "Wrong!";
         fourthResult.style.color = "red";
-        res4.src="img/wrong.png";
+        res4.src = "img/wrong.png";
     }
 
-    if(falseCheck && !trueCheck){
+    if (falseCheck && !trueCheck) {
         fifthResult.textContent = "Correct!";
         fifthResult.style.color = "green";
         res5.src = "img/correct.png";
         grade += 20;
     }
-    else{
+    else {
         fifthResult.textContent = "Wrong!";
         fifthResult.style.color = "red";
         res5.src = "img/wrong.png";
     }
 
 
-    if(grade > 80){
+    if (grade > 80) {
         document.querySelector("#highGrade").textContent = "Congrats you passed with a high score!";
     }
 
@@ -139,15 +127,15 @@ function gradeQuiz(){
     let repeats = document.querySelector("#repeats");
 
     let taken = localStorage.getItem("count");
-    if(taken == null){
+    if (taken == null) {
         taken = 0;
     }
-    
+
     taken++;
 
     localStorage.setItem("count", taken);
 
     repeats.textContent = "You have taken the quiz: " + taken + " times";
 
-    
+
 }
