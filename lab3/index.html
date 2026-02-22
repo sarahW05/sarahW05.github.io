@@ -4,50 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 3: Quiz</title>
-    <script src="js/script.js" defer>
-
-    </script>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <h1>Coffee Quiz</h1>
 
-    1. What type of coffee uses the most milk  <br>
-    <!--
-        <label><input type="radio" name="q1" value="latte"> Latte </label>
-        <label><input type="radio" name="q1" value="cortado"> Cortado </label>
-        <label><input type= "radio" name="q1" value="cold brew"> Cold Brew </label>
-        <br>
-        -->
-        <div id="q1optionsDiv"> </div>
-        <p id="firstResult"></p>
-    <br> 
+    <h3>1. What type of coffee uses the most milk </h3> 
+    <div id="q1optionsDiv"> </div>
+    <div class="result">
+        <span id="firstResult"></span>
+        <img id="res1" width="20">
+    </div>
 
-    2. What country produces the most coffee beans? <br>
-    
+    <h3>2. What country produces the most coffee beans</h3>
     <input type="text" id="answerInput">
-    <p id="secondResult"></p>
     <br>
+    <div class="result">
+        <span id="secondResult"></span>
+        <img id="res2" width="20">
+    </div>
 
-
-    3. What is the most Popular Brewer <br>
-    <select id="brews" name="Brews">
+    <h3>3. What is the most popular brewing method</h3>
+    <select id="brews">
         <option value="pour-over">Pour-Over</option>
         <option value="drip">Drip</option>
         <option value="espresso">Espresso</option>
     </select>
-    <p id="thirdResult"></p>
+    <br>
+    <div class="result">
+        <span id="thirdResult"></span>
+        <img id="res3" width="20">
+    </div>
 
-    4. How many ounces are in a double-shot of espresso?<br>
+    <h3>4. How many ounces are in a double-shot of espresso</h3>
     <input type="number" id="numInput">
-    <p id="fourthResult"></p>
+    <br>
+    <div class="result">
+        <span id="fourthResult"></span>
+        <img id="res4" width="20">
+    </div>
 
-    5. Coffee is a bean. True or false
-    <input type="checkbox" id="tOrf">True
-    <p id="fifthResult"></p>
+    <h3>5. Coffee is a bean. True or false</h3>
+    <label><input type="checkbox" name="isBean" id="true">True</label>
+    <label><input type="checkbox" name="isBean" id="false">False</label>
+    <br>
+    <div class="result">
+        <span id="fifthResult"></span>
+        <img id="res5" width="20">
+    </div>
 
     <br>
     <button> Submit Quiz</button>    
 
-
+    <p id="highGrade"></p>
+    <p id="score"></p>
+    <p id="repeats"></p>
 </body>
 </html>
