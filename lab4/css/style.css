@@ -1,0 +1,67 @@
+h1{
+    text-align: center;
+    color: #b9975a;
+    margin-top: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+body{
+    background-color: #fffdf8;
+}
+fieldset{
+    width: 40%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f6ef;
+    border: 5px solid #b9975a;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+legend{
+    font-weight: bold;
+    color:#b9975a;
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+input[type="text"], input[type="password"], select{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 30%;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, select:focus{
+    outline: none;
+    border-color: #b9975a;
+    background-color: #fffdf8;
+}
+
+input[type=submit]:hover{
+    background-color: #a88646;
+}
+
+#noZip{
+    font-size: 15px;
+    font-style: italic;
+}
+
+#city-display, #latitude-display, #longitude-display{
+    font-weight: bold;
+    color: #333;
+}
+
+#username-valid{
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+#password-suggestion{
+    color: #b9975a;
+    font-style: italic;
+}

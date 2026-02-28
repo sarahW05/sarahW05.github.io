@@ -13,7 +13,9 @@ let fourthResult = document.querySelector("#fourthResult");
 let fifthResult = document.querySelector("#fifthResult");
 
 shuffleQ1Answers();
-
+getQuotes.addEventListener("input", function(){
+    result.textContent="";
+})
 
 function shuffleQ1Answers() {
     let qOptions = ["Latte", "Cortado", "Cold Brew"];
